@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const projects = [
         {
             name: 'Quote machine',
-            url: 'https://github.com/kris-perova/quote-machine'
+            url: 'https://kris-perova.github.io/quote-machine'
         },
         {
             name: 'Markdown Previewer',
