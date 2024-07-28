@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             name: 'Markdown Previewer',
-            url: 'https://github.com/kris-perova/markdown-previewer'
+            url: 'https://kris-perova.github.io/markdown-previewer/',
+            gitHubUrl: 'https://github.com/kris-perova/markdown-previewer'
         }
     ];
 
