@@ -23,18 +23,19 @@ document.addEventListener('DOMContentLoaded', function() {
         paragraphElement.appendChild(anchorElement);
     }
 
+    function createGitButton (listItem, hrefGit) {
+        const anchorElement = document.createElement('a');
+        const buttonElement = document.createElement('img');
+        anchorElement.href = hrefGit;
+        buttonElement.src = 'github.png';
+        listItem.appendChild(anchorElement);
+        anchorElement.appendChild(buttonElement);
+    }
+
     projects.forEach(project => {
         const listItem = document.createElement('li');
         createListElement(listItem, project.url, project.name);
-
-        const anchorElement = document.createElement('a');
-        const buttonElement = document.createElement('img');
-        anchorElement.href = project.gitHubUrl;
-        buttonElement.src = 'github.png';
-
-        listItem.appendChild(anchorElement);
-        anchorElement.appendChild(buttonElement);
-
+        createGitButton(listItem, project.gitHubUrl);
         projectList.appendChild(listItem);
     });
 });
