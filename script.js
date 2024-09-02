@@ -17,20 +17,26 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectList = document.getElementById('project-list');
 
     function createPlayButton(listItem, href) {
+        const leftButton = document.createElement('div');
         const paragraphElement = document.createElement('p');
         const anchorElement = document.createElement('a');
+        leftButton.className = 'left-button';
         anchorElement.href = href;
         anchorElement.textContent = 'Play';
-        listItem.appendChild(paragraphElement);
+        listItem.appendChild(leftButton);
+        leftButton.appendChild(paragraphElement);
         paragraphElement.appendChild(anchorElement);
     }
 
     function createGitButton (listItem, hrefGit) {
+        const rightButton = document.createElement('div');
         const anchorElement = document.createElement('a');
         const buttonElement = document.createElement('img');
+        rightButton.className = 'right-button';
         anchorElement.href = hrefGit;
         buttonElement.src = 'github.png';
-        listItem.appendChild(anchorElement)
+        listItem.appendChild(rightButton);
+        rightButton.appendChild(anchorElement);
         anchorElement.appendChild(buttonElement);
     }
 
