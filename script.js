@@ -18,26 +18,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function createPlayButton(listItem, href) {
         const leftButton = document.createElement('div');
-        const paragraphElement = document.createElement('p');
         const anchorElement = document.createElement('a');
         leftButton.className = 'left-button';
         anchorElement.href = href;
-        anchorElement.textContent = 'Play';
+        anchorElement.textContent = "Play";
         listItem.appendChild(leftButton);
-        leftButton.appendChild(paragraphElement);
-        paragraphElement.appendChild(anchorElement);
+        leftButton.appendChild(anchorElement);
     }
 
     function createGitButton (listItem, hrefGit) {
         const rightButton = document.createElement('div');
         const anchorElement = document.createElement('a');
-        const buttonElement = document.createElement('img');
         rightButton.className = 'right-button';
         anchorElement.href = hrefGit;
-        buttonElement.src = 'github.png';
+        anchorElement.textContent = "Link to GitHub";
         listItem.appendChild(rightButton);
         rightButton.appendChild(anchorElement);
-        anchorElement.appendChild(buttonElement);
     }
 
     projects.forEach(project => {
@@ -50,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const descriptionProject = document.createElement('p');
         descriptionProject.textContent = project.description;
+        descriptionProject.className = 'project-description';
         listItem.appendChild(descriptionProject);
 
         createPlayButton(listItem, project.url);
