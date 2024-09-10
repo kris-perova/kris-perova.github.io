@@ -24,12 +24,12 @@ section {
 #my-information {
     display: flex;
     justify-content: space-between;
-    padding-top: 0px;
+    padding-top: 0;
     flex-wrap: wrap;
 }
 
 #my-information h2 {
-    margin: 50px 0px;
+    margin: 50px 0;
     font-size: 6rem;
     color: transparent;
     -webkit-text-stroke: 2px #669d6f;
@@ -45,7 +45,7 @@ section {
 }
 
 #projects h2 {
-    margin: 50px 0px;
+    margin: 50px 0;
     font-size: 6rem;
     color: transparent;
     -webkit-text-stroke: 2px #669d6f;
@@ -103,33 +103,25 @@ section {
     font-weight: bolder;
 }
 
-/*@media (max-width: 1050px) {*/
-/*    .about-me {*/
-/*        width: 100%;*/
-/*        margin-top: 0px;*/
-/*    }*/
-
-/*}*/
-
 /* adaptation for tablets and phones */
 @media (max-width: 1050px) {
     #my-information {
         flex-direction: column; /* change to vertical orientation */
-        /*align-items: center;*/
     }
 
     .about-me {
         width: 100%;
-        margin-top: 0px;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     #projects h2 {
-        /*text-align: center;*/
+        margin-top: 20px;
     }
 
     #project-list {
-        margin-top: 0px;
-        padding-top: 0px;
+        margin-top: 0;
+        padding-top: 0;
         flex-direction: column; /* change to vertical orientation */
         align-items: center;
     }
@@ -144,21 +136,24 @@ section {
         font-size: 4rem; /* increase header for small screens */
     }
 
+    #projects h2 {
+        margin-top: 20px;
+    }
+
     .about-me {
         font-size: 1.1rem;
-        margin-top: 0px;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     #project-list {
+        margin-top: 0;
+        padding-top: 0;
         flex-direction: column; /* change to vertical orientation */
         align-items: center;
-        /*margin-top: 0px;*/
-        /*padding-top: 0px;*/
     }
 
     #project-list li {
-        /*width: 45%; !* container's width depends on screen *!*/
-        /*min-width: 300px; !* min-width for adaptation *!*/
         padding: 10px 10px;
         margin: 10px 0;
         border-radius: 5px;
